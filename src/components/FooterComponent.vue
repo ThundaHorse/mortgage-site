@@ -1,24 +1,24 @@
 <template>
   <v-footer class="bg-grey-lighten-1">
     <v-row
+      class="my-12"
       justify="center"
       no-gutters
     >
       <v-btn
-        v-for="link in links"
-        :key="link"
-        color="white"
-        variant="text"
+        v-for="(link, index) in links"
+        :key="index"
         class="mx-2"
-        rounded="xl"
+        :color="link.color"
+        icon
       >
-        {{ link }}
+        <i :class="link.icon"></i>
       </v-btn>
       <v-col
         class="text-center mt-4"
         cols="12"
       >
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        <strong>Danny Park Mortgage</strong> - 2023
       </v-col>
     </v-row>
   </v-footer>
@@ -27,8 +27,32 @@
 <script>
   export default {
     name: 'FooterComponent',
-    data: () => ({
-      links: ['Home', 'About Us', 'Team', 'Services', 'Blog', 'Contact Us'],
-    }),
+    data() {
+      return {
+        links: [
+          {
+            name: 'Facebook',
+            icon: 'fab fa-facebook-f fa-lg',
+            color: 'blue-lighten-2',
+          },
+          {
+            name: 'Instagram',
+            icon: 'fab fa-instagram fa-lg',
+            color: 'purple-lighten-1',
+          },
+
+          {
+            name: 'Email',
+            icon: 'fas fa-envelope fa-lg',
+            color: 'green-lighten-4',
+          },
+          {
+            name: 'LinkedIn',
+            icon: 'fab fa-linkedin fa-lg',
+            color: 'blue-lighten-1',
+          },
+        ],
+      };
+    },
   };
 </script>
