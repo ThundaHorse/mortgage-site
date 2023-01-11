@@ -1,0 +1,40 @@
+@import '../utilities/_variables';
+
+.learn-more-page {
+  #intro-image {
+    background-image: url(~/public/assets/images/mortgage-skyline.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(px2rem(6));
+    -webkit-filter: blur(px2rem(6));
+    height: px2rem(700);
+  }
+
+  #intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: $white;
+    font-weight: bold;
+    border: px2rem(1) solid $white;
+    padding: px2rem(12);
+  }
+
+  #image-placeholder {
+    background-color: $green;
+    height: px2rem(700);
+    width: px2rem(400);
+  }
+
+  #outro {
+    background-color: $purple-50;
+    height: px2rem(700);
+    width: 100%;
+  }
+}
