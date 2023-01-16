@@ -16,6 +16,16 @@ const routes = [
     name: 'learnMore',
     component: () => import('../views/LearnMorePage.vue'),
   },
+  {
+    path: '/reviews',
+    name: 'reviewsPage',
+    component: () => import('../views/ReviewPage.vue'),
+  },
+  {
+    path: '/media',
+    name: 'mediaPage',
+    component: () => import('../views/MediaPage.vue'),
+  },
 ];
 
 const router = createRouter({

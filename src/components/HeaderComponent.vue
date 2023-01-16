@@ -17,7 +17,8 @@
     <nav class="hidden-sm-and-down">
       [ <router-link to="/">Home</router-link> |
       <router-link to="/learn-more">Learn More</router-link> |
-      <router-link to="/about">About</router-link> ]
+      <router-link to="/about">About</router-link> |
+      <router-link to="/reviews">Reviews</router-link> ]
     </nav>
 
     <template #append>
