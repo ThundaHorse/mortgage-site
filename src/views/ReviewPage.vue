@@ -68,24 +68,39 @@
       };
     },
     mounted() {
-      if (!this.reviewData.length) {
-        this.fetchReviews();
-      }
+      this.fetchReviews();
     },
     methods: {
       fetchReviews() {
         const url = `${process.env.VUE_APP_API_URL}&partnerId=${process.env.VUE_APP_PARTNER_ID}&nmlsId=${process.env.VUE_APP_NMLS_ID}&reviewLimit=10`;
         const request = axios.get(url);
-        setTimeout(() => {
-          request
-            .then((res) => {
-              this.reviewData = res.data.reviews;
-              this.loaded = true;
-            })
-            .catch((e) => {
-              console.log(e);
-            });
-        }, 2000);
+        const cachedReviews = JSON.parse(
+          localStorage?.getItem('fetchedReviews')
+        );
+        if (cachedReviews) {
+          this.reviewData = cachedReviews;
+          this.loaded = true;
+        } else {
+          this.loaded = false;
+          this.reviewData = [];
+
+          setTimeout(() => {
+            request
+              .then((res) => {
+                this.reviewData = res.data.reviews;
+                this.loaded = true;
+                localStorage.setItem(
+                  'fetchedReviews',
+                  JSON.stringify(res.data.reviews)
+                );
+              })
+              .catch((e) => {
+                console.log(e);
+                this.loaded = false;
+                localStorage.clear();
+              });
+          }, 1000);
+        }
       },
     },
   };
