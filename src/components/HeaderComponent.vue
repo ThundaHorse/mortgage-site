@@ -18,6 +18,7 @@
       [ <router-link to="/">Home</router-link> |
       <router-link to="/learn-more">Learn More</router-link> |
       <router-link to="/about">About</router-link> |
+      <router-link to="/media">Media</router-link> |
       <router-link to="/reviews">Reviews</router-link> ]
     </nav>
 
@@ -105,6 +106,16 @@
           {
             text: 'Learn More',
             to: '/learn-more',
+            icon: 'mdi-home',
+          },
+          {
+            text: 'Reviews',
+            to: '/reviews',
+            icon: 'mdi-home',
+          },
+          {
+            text: 'Media',
+            to: '/media',
             icon: 'mdi-home',
           },
         ],

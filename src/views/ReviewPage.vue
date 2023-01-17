@@ -1,45 +1,60 @@
 <template>
   <div class="review-page">
-    <h1>Review page</h1>
-    <v-progress-circular
-      v-if="!loaded"
-      color="blue-lighten-3"
-      indeterminate
-      :size="120"
-      :width="5"
-    ></v-progress-circular>
+    <v-container>
+      <v-row class="mt-8">
+        <v-col>
+          <h1>Reviews</h1>
+        </v-col>
+      </v-row>
 
-    <v-container v-else>
-      <v-window
-        v-model="window"
-        show-arrows="hover"
-      >
-        <v-window-item
-          v-for="(review, index) in reviewData"
-          :key="index"
+      <v-container>
+        <v-progress-circular
+          v-if="!loaded"
+          color="blue-lighten-3"
+          indeterminate
+          :size="120"
+          :width="5"
+        ></v-progress-circular>
+
+        <v-carousel
+          v-else
+          show-arrows="hover"
+          hide-delimiter-background
         >
-          <v-card
-            variant="tonal"
-            height="300"
+          <v-carousel-item
+            v-for="(review, index) in reviewData"
+            :key="index"
           >
-            <v-card-title>
-              "<span
-                v-for="(n, idx) in review.rating"
-                :key="idx"
-              >
-                <v-icon icon="mdi-star"></v-icon> </span
-              >"
-            </v-card-title>
-            <v-card-subtitle>
-              By: {{ review.reviewerName.displayName }}
-            </v-card-subtitle>
-
-            <v-card-text class="align-center my-auto mx-4">
-              "{{ review.content }}"
-            </v-card-text>
-          </v-card>
-        </v-window-item>
-      </v-window>
+            <div
+              class="d-flex fill-height flex-column justify-center align-center"
+            >
+              <v-row>
+                <v-col class="mt-auto mb-0"
+                  ><div class="text-h6">
+                    {{ review.content }}
+                  </div>
+                </v-col>
+              </v-row>
+              <v-row class="mt-0">
+                <v-col
+                  cols="12"
+                  class="mb-6"
+                >
+                  <div class="text-subtitle-2">
+                    "<span
+                      v-for="(n, idx) in review.rating"
+                      :key="idx"
+                    >
+                      <v-icon icon="mdi-star"></v-icon> </span
+                    >"
+                  </div>
+                  <p>- {{ review.reviewerName.displayName }}</p>
+                </v-col>
+              </v-row>
+            </div>
+          </v-carousel-item>
+        </v-carousel>
+      </v-container>
     </v-container>
   </div>
 </template>
@@ -56,7 +71,7 @@
         loaded: false,
       };
     },
-    created() {
+    mounted() {
       if (!this.reviewData.length) {
         this.fetchReviews();
       }

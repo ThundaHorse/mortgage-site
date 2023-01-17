@@ -1,5 +1,5 @@
 <template>
-  <v-layout>
+  <v-layout :full-height="true">
     <HeaderComponent />
     <v-main>
       <v-container
