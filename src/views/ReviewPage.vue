@@ -77,7 +77,8 @@
         const cachedReviews = JSON.parse(
           localStorage?.getItem('fetchedReviews')
         );
-        if (cachedReviews) {
+
+        if (cachedReviews?.length > 0) {
           this.reviewData = cachedReviews;
           this.loaded = true;
         } else {
@@ -97,7 +98,7 @@
               .catch((e) => {
                 console.log(e);
                 this.loaded = false;
-                localStorage.clear();
+                localStorage.setItem('fetchedReviews', JSON.stringify([]));
               });
           }, 1000);
         }

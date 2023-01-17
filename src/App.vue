@@ -33,7 +33,7 @@
     methods: {
       // eslint-disable-next-line no-unused-vars
       onLoad(e) {
-        window.localStorage.setItem('fetchedReviews', []);
+        window.localStorage.setItem('fetchedReviews', JSON.stringify([]));
       },
       // eslint-disable-next-line no-unused-vars
       onUnload(e) {
