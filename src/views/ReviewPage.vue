@@ -90,10 +90,3 @@
     },
   };
 </script>
-
-<style scoped>
-  .text-h6 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-</style>
