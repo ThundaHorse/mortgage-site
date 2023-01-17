@@ -1,13 +1,16 @@
 <template>
   <div class="review-page">
     <v-container>
-      <v-row class="mt-8">
+      <v-row>
         <v-col>
           <h1>Reviews</h1>
         </v-col>
       </v-row>
 
-      <v-container>
+      <v-container
+        class="p-0"
+        fluid
+      >
         <v-progress-circular
           v-if="!loaded"
           color="blue-lighten-3"
@@ -25,30 +28,23 @@
             v-for="(review, index) in reviewData"
             :key="index"
           >
-            <div
-              class="d-flex fill-height flex-column justify-center align-center"
-            >
+            <div class="text-subtitle-2">
+              "<span
+                v-for="(n, idx) in review.rating"
+                :key="idx"
+              >
+                <v-icon icon="mdi-star"></v-icon> </span
+              >"
+            </div>
+            <p>
+              - <b>{{ review.reviewerName.displayName }}</b>
+            </p>
+            <div class="d-flex h-auto flex-column justify-center align-center">
               <v-row>
-                <v-col class="mt-auto mb-0"
-                  ><div class="text-h6">
+                <v-col class="mb-0"
+                  ><p>
                     {{ review.content }}
-                  </div>
-                </v-col>
-              </v-row>
-              <v-row class="mt-0">
-                <v-col
-                  cols="12"
-                  class="mb-6"
-                >
-                  <div class="text-subtitle-2">
-                    "<span
-                      v-for="(n, idx) in review.rating"
-                      :key="idx"
-                    >
-                      <v-icon icon="mdi-star"></v-icon> </span
-                    >"
-                  </div>
-                  <p>- {{ review.reviewerName.displayName }}</p>
+                  </p>
                 </v-col>
               </v-row>
             </div>
@@ -94,3 +90,10 @@
     },
   };
 </script>
+
+<style scoped>
+  .text-h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
