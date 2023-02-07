@@ -6,13 +6,16 @@
       @click="toggleDrawer"
     ></v-app-bar-nav-icon>
 
-    <v-btn
-      class="hidden-sm-and-down"
-      color="success"
-      icon="md:supervisor_account"
+    <v-avatar
+      class="hidden-sm-and-down ml-2"
       size="x-large"
       @click="$router.push('/')"
-    ></v-btn>
+    >
+      <v-img
+        :src="require('../../public/assets/images/logoWhite.webp')"
+        alt="Logo"
+      ></v-img>
+    </v-avatar>
 
     <nav class="hidden-sm-and-down">
       [ <router-link to="/">Home</router-link> |
@@ -37,8 +40,11 @@
     <v-app-bar-title
       class="hidden-md-and-up"
       @click="$router.push('/')"
-      >Title</v-app-bar-title
-    >
+      ><v-avatar
+        :image="require('../../public/assets/images/logo.png')"
+        size="80"
+      ></v-avatar
+    ></v-app-bar-title>
   </v-app-bar>
 
   <v-navigation-drawer

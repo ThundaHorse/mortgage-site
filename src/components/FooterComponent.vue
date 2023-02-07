@@ -18,7 +18,11 @@
         class="text-center mt-4"
         cols="12"
       >
-        <strong>Danny Park Mortgage</strong> - 2023
+        <v-avatar
+          :image="require('../../public/assets/images/logo.png')"
+          size="100"
+        ></v-avatar>
+        - 2023
       </v-col>
     </v-row>
   </v-footer>
