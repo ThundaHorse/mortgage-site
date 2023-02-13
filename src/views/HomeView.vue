@@ -1,34 +1,14 @@
 <template>
   <div class="home">
     <!-- Hero Intro -->
-    <v-parallax
-      height="700"
-      src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-    >
+    <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg">
       <div
-        class="d-flex flex-column fill-height justify-center align-center text-white mx-4 mt-4"
+        class="d-flex flex-column fill-height justify-center align-center text-white mt-4"
       >
         <v-row no-gutters>
           <v-col
-            :cols="cols[0]"
-            class="my-auto"
-          >
-            <h2 class="text-h4 font-weight-thin mb-4">Danny Park</h2>
-            <h3 class="subheading">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              perspiciatis facilis eius aliquid quidem placeat ipsa fuga
-              voluptate reprehenderit debitis officia quod sunt, voluptatum,
-              qui, quia aliquam! Rem, itaque consequuntur! Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sequi perspiciatis facilis eius
-              aliquid quidem placeat ipsa fuga voluptate reprehenderit debitis
-              officia quod sunt, voluptatum, qui, quia aliquam! Rem, itaque
-              consequuntur!
-            </h3>
-          </v-col>
-
-          <v-col
             :cols="cols[1]"
-            class="my-auto"
+            class="my-auto px-2"
           >
             <h3>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, hic
@@ -36,6 +16,27 @@
               nostrum explicabo eaque maiores, quis aperiam accusamus
               praesentium suscipit ipsa commodi. Quam.
             </h3>
+          </v-col>
+
+          <v-col
+            :cols="cols[0]"
+            class="mr-0 d-flex"
+          >
+            <v-img
+              :aspect-ratio="16 / 9"
+              class="float-right"
+              width="300"
+              :src="require('../../public/assets/images/headshotClipped.webp')"
+              alt="headshot"
+            ></v-img>
+
+            <div class="portrait-wrapper hidden-sm-and-down">
+              <p class="subheading">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                perspiciatis facilis eius aliquid quidem placeat ipsa fuga
+                voluptate reprehenderit debitis officia quod sunt, voluptatum.
+              </p>
+            </div>
           </v-col>
         </v-row>
       </div>
