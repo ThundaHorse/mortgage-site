@@ -3,7 +3,7 @@
     <!-- Hero Intro -->
     <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg">
       <div
-        class="d-flex flex-column fill-height justify-center align-center text-white mt-4"
+        class="d-flex fill-height justify-space-between v-container text-white mt-4 mb-4"
       >
         <v-row no-gutters>
           <v-col
@@ -16,26 +16,34 @@
               nostrum explicabo eaque maiores, quis aperiam accusamus
               praesentium suscipit ipsa commodi. Quam.
             </h3>
+
+            <v-avatar
+              :image="require('../../public/assets/images/avatarNoBg.webp')"
+              class="hero_avatar my-auto hidden-md-and-up"
+              size="200"
+            />
           </v-col>
 
           <v-col
             :cols="cols[0]"
             class="mr-0 d-flex"
           >
-            <v-img
-              :aspect-ratio="16 / 9"
-              class="float-right"
-              width="300"
-              :src="require('../../public/assets/images/headshotClipped.webp')"
-              alt="headshot"
-            ></v-img>
+            <div class="hero-personal d-flex align-items-end justify-end">
+              <v-avatar
+                :image="require('../../public/assets/images/avatarNoBg.webp')"
+                class="hero_avatar my-auto hidden-sm-and-down"
+                size="400"
+              />
 
-            <div class="portrait-wrapper hidden-sm-and-down">
-              <p class="subheading">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                perspiciatis facilis eius aliquid quidem placeat ipsa fuga
-                voluptate reprehenderit debitis officia quod sunt, voluptatum.
-              </p>
+              <div
+                class="hero-personal-message d-flex align-items-start flex-column justify-content-center"
+              >
+                <p class="subheading hidden-sm-and-down font-weight-thin">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                  perspiciatis facilis eius aliquid quidem placeat ipsa fuga
+                  voluptate reprehenderit debitis officia quod sunt, voluptatum.
+                </p>
+              </div>
             </div>
           </v-col>
         </v-row>
