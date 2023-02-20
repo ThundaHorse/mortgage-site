@@ -26,7 +26,7 @@
               :aspect-ratio="16 / 9"
               class="float-right"
               width="300"
-              :src="require('../../public/assets/images/headshotClipped.webp')"
+              :src="require('../../public/assets/images/danny-full-body.webp')"
               alt="headshot"
             ></v-img>
 
