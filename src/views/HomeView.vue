@@ -8,13 +8,16 @@
         <v-row no-gutters>
           <v-col
             :cols="cols[1]"
-            class="my-auto px-2"
+            class="my-auto px-4"
           >
+            <h2>Hi, I'm Danny Park!</h2>
+
+            <br />
+
             <h3>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, hic
-              eos nihil vero, fugiat repellendus sunt accusantium exercitationem
-              nostrum explicabo eaque maiores, quis aperiam accusamus
-              praesentium suscipit ipsa commodi. Quam.
+              Are you are in need of a mortgage broker who has a deep
+              understanding of the lending process and a commitment to helping
+              you achieve your financial goals?
             </h3>
           </v-col>
 
@@ -32,9 +35,9 @@
 
             <div class="portrait-wrapper hidden-sm-and-down">
               <p class="subheading">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                perspiciatis facilis eius aliquid quidem placeat ipsa fuga
-                voluptate reprehenderit debitis officia quod sunt, voluptatum.
+                Danny Park is a talented and experienced mortgage broker who has
+                a passion for helping people achieve their dreams of
+                homeownership.
               </p>
             </div>
           </v-col>
@@ -52,17 +55,22 @@
           cols="12"
         >
           <h1>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-            corrupti blanditiis. Ipsam aperiam labore, voluptatum quos iusto
-            amet est blanditiis illum maiores reprehenderit rem expedita
-            repellendus reiciendis. Iure, alias vel.
+            Danny is also known for his commitment to his clients. He takes the
+            time to listen to their needs and concerns and works tirelessly to
+            find the best possible solutions for their unique financial
+            situations. Whether his clients are first-time homebuyers or
+            seasoned real estate investors, Danny treats each one with the same
+            level of care and attention, making sure that they feel confident
+            and informed every step of the way.
           </h1>
 
           <h3 class="mt-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-            corrupti blanditiis. Ipsam aperiam labore, voluptatum quos iusto
-            amet est blanditiis illum maiores reprehenderit rem expedita
-            repellendus reiciendis. Iure, alias vel.
+            With his fluency in both English and Korean, Danny is able to
+            effectively communicate with clients from a wide range of
+            backgrounds, which has helped him to establish strong relationships
+            in multiple communities. He is a trusted advisor to many, and his
+            reputation for honesty, integrity, and professionalism has earned
+            him a loyal following.
           </h3>
         </v-col>
 
@@ -130,37 +138,16 @@
       <v-spacer></v-spacer>
 
       <p class="mb-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
-        accusamus. Vitae est, quos quae perspiciatis rem quisquam accusamus
-        exercitationem explicabo hic dolor voluptatum! Atque aliquam sunt cumque
-        necessitatibus suscipit fugiat! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Consectetur, accusamus. Vitae est, quos quae
-        perspiciatis rem quisquam accusamus exercitationem explicabo hic dolor
-        voluptatum! Atque aliquam sunt cumque necessitatibus suscipit fugiat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
-        accusamus. Vitae est, quos quae perspiciatis rem quisquam accusamus
-        exercitationem explicabo hic dolor voluptatum! Atque aliquam sunt cumque
-        necessitatibus suscipit fugiat!
+        Danny got his start in the financial industry more than a decade ago as
+        a commercial loan underwriter and has since built a reputation as one of
+        the most knowledgeable and reliable mortgage brokers in the field. His
+        deep understanding of the lending process and his ability to navigate
+        the complexities of the mortgage industry have helped countless clients
+        secure the financing they need to purchase their first home, refinance
+        their existing mortgage, or invest in real estate.
       </p>
 
       <v-divider inset></v-divider>
-
-      <p class="mt-6">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
-        accusamus. Vitae est, quos quae perspiciatis rem quisquam accusamus
-        exercitationem explicabo hic dolor voluptatum! Atque aliquam sunt cumque
-        necessitatibus suscipit fugiat!
-      </p>
-
-      <p class="mt-6">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
-        accusamus. Vitae est, quos quae perspiciatis rem quisquam accusamus
-        exercitationem explicabo hic dolor voluptatum! Atque aliquam sunt cumque
-        necessitatibus suscipit fugiat! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Consectetur, accusamus. Vitae est, quos quae
-        perspiciatis rem quisquam accusamus exercitationem explicabo hic dolor
-        voluptatum! Atque aliquam sunt cumque necessitatibus suscipit fugiat!
-      </p>
     </div>
   </div>
 </template>
