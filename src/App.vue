@@ -1,5 +1,8 @@
 <template>
-  <v-layout :full-height="true">
+  <v-layout
+    :full-height="true"
+    transition="fade-transition"
+  >
     <HeaderComponent />
     <v-main>
       <v-container
