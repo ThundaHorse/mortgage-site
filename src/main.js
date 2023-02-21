@@ -13,6 +13,21 @@ import * as directives from 'vuetify/directives';
 import '@mdi/font/css/materialdesignicons.css';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 
+const app = createApp(App);
+async function loadFonts() {
+  const webFontLoader = await import(
+    /* webpackChunkName: "webfontloader" */ 'webfontloader'
+  );
+
+  webFontLoader.load({
+    google: {
+      families: ['Roboto:100,300,400,500,700,900&display=swap'],
+    },
+  });
+}
+
+loadFonts(app);
+
 const vuetify = createVuetify({
   components,
   directives,
@@ -26,4 +41,4 @@ const vuetify = createVuetify({
   },
 });
 
-createApp(App).use(vuetify).use(router).mount('#app');
+app.use(vuetify).use(router).mount('#app');
