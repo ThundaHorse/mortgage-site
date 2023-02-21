@@ -12,29 +12,32 @@
       </v-btn>
     </div>
 
-    <v-divider></v-divider>
+    <v-row class="my-auto mx-auto">
+      <v-col :cols="cols[4]">
+        <div class="text-caption pt-4 text-left">
+          This licensee is performing acts for which a real estate license is
+          required. BCE Financial Corporation is licensed by the Georgia
+          Department of Banking and Finance, Broker #60025; NMLS #1792105. Loan
+          approval is not guaranteed and is subject to lender review of
+          information. All loan approvals are conditional and all conditions
+          must be met by borrower. Loan is only approved when lender has issued
+          approval in writing and is subject to underwriting conditions.
+          Specified rates may not be available for all borrowers. Rate subject
+          to change with market conditions. BCE Financial Corporation is an
+          Equal Opportunity Mortgage Broker/Lender. As a broker, BCE Financial
+          Corporation is NOT individually approved by the FHA or HUD, but BCE
+          Financial Corporation is allowed to originate FHA loans based on their
+          relationships with FHA approved lenders.
+        </div>
+      </v-col>
 
-    <div class="pt-4 text-left">
-      This licensee is performing acts for which a real estate license is
-      required. BCE Financial Corporation is licensed by the Georgia Department
-      of Banking and Finance, Broker #60025; NMLS #1792105. Loan approval is not
-      guaranteed and is subject to lender review of information. All loan
-      approvals are conditional and all conditions must be met by borrower. Loan
-      is only approved when lender has issued approval in writing and is subject
-      to underwriting conditions. Specified rates may not be available for all
-      borrowers. Rate subject to change with market conditions. BCE Financial
-      Corporation is an Equal Opportunity Mortgage Broker/Lender. As a broker,
-      BCE Financial Corporation is NOT individually approved by the FHA or HUD,
-      but BCE Financial Corporation is allowed to originate FHA loans based on
-      their relationships with FHA approved lenders.
-    </div>
-
-    <div>
-      <v-avatar
-        :image="require('../../public/assets/images/logo.png')"
-        size="100"
-      ></v-avatar>
-    </div>
+      <v-col :cols="cols[5]">
+        <v-avatar
+          :image="require('../../public/assets/images/logo.png')"
+          size="100"
+        ></v-avatar>
+      </v-col>
+    </v-row>
   </v-footer>
 </template>
 
@@ -67,6 +70,16 @@
           },
         ],
       };
+    },
+    computed: {
+      cols() {
+        const { mdAndUp, smAndDown } = this.$vuetify.display;
+        return mdAndUp
+          ? [6, 6, 8, 4, 10, 2]
+          : smAndDown
+          ? [12, 12, 12, 12, 12, 12]
+          : [6, 6, 8, 4, 10, 2];
+      },
     },
   };
 </script>
